@@ -1,0 +1,57 @@
+#
+# tsFly 1.0 by Tashhq
+#
+# This plugin allows players to toggle flight mode on and off.
+
+# global enable/disable
+enabled: true
+
+# list of worlds where flight is allowed. empty = all worlds (case-sensitive names)
+allowed-worlds: []
+
+# informational header shown by /tsfly help
+tsinfo:
+  - "&6tsFly by Tashhq"
+  - "&7Lightweight flight toggle with admin tools"
+
+# sounds that play on various events (each section can be disabled)
+sounds:
+  toggle:
+    enabled: true
+    sound: "NOTE_STICKS"
+    volume: 1.0
+    pitch: 1.0
+  world-disabled:
+    enabled: true
+    sound: "NOTE_PLING"
+    volume: 1.0
+    pitch: 1.0
+  plugin-disabled:
+    enabled: true
+    sound: "NOTE_BASS"
+    volume: 1.0
+    pitch: 1.0
+
+# messages players see; color codes use &
+messages:
+  enabled: "&6&lFLY &bYou have started flying!"
+  disabled: "&6&lFLY &cYou are no longer flying!"
+  no-permission: "&cYou do not have permission to fly."
+  only-players: "&6&lFLY &cOnly players can use this command."
+  plugin-disabled: "&6&lFLY &cThis feature is currently disabled."
+  world-disabled: "&6&lFLY &cYou cannot fly in this world."
+  admin-help: "&eCommands:\n &7fly &f- toggle your own flight\n &7/tsfly help &f- this message\n &7/tsfly toggle <player> &f- toggle someone else's flight"
+  player-not-found: "&cPlayer {player} is not online."
+  admin-toggle: "&aFlight for {player} has been {state}."
+
+# placeholder API values (optional, requires PlaceholderAPI plugin)
+placeholders:
+  fly_ph: "Flying"
+  nofly_ph: "Not flying"
+
+# console messages on enable/disable (colors & version placeholder allowed)
+console:
+  startup:
+    - "&8[&etsFly&8] &aEnabled!"
+  shutdown:
+    - "&8[&etsFly&8] &cDisabled!"
